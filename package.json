@@ -7,14 +7,26 @@
     "serve": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start:server": "json-server --watch data/db.json  "
+    "start:server": "json-server --watch data/db.json  ",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "json-server": "^0.17.1",
     "vue": "^3.2.41"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-vite": "^0.2.5",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/vue3": "^6.5.13",
     "@vitejs/plugin-vue": "^3.2.0",
-    "vite": "^3.2.3"
+    "babel-loader": "^8.3.0",
+    "vite": "^3.2.3",
+    "vue-loader": "^16.8.3"
   }
 }
