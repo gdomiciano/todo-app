@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+
 </template>
 
 <script>
@@ -43,9 +43,7 @@ export default {
       style: computed(() => ({
         backgroundColor: props.backgroundColor,
       })),
-      onClick() {
-        emit('click');
-      }
+
     }
   },
 };

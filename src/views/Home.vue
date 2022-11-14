@@ -1,20 +1,20 @@
 <script setup>
-    import TheHeader from "../components/TheHeader/TheHeader.vue";
-    import TheColumn from "../components/TheColumn/TheColumn.vue";
-    import getData from "../composables/getData";
-    import { ref } from "vue";
+import TdHeader from "../components/TdHeader/TdHeader.vue";
+import TdColumn from "../components/TdColumn/TdColumn.vue";
+import getData from "../composables/getData";
+import { ref } from "vue";
 
-    let addBtnText = "Add Item";
-    let addInputPlaceholder = "write your todo item...";
-    const itemValue = ref(null);
-    const { response, error, load } = getData();
-    load("statuses");
-    const statuses = response;
+let addBtnText = "Add Item";
+let addInputPlaceholder = "write your todo item...";
+const itemValue = ref(null);
+const { response, error, load } = getData();
+load("statuses");
+const statuses = response;
 </script>
 
 <template>
   <main>
-    <TheHeader />
+    <TdHeader />
     <hr />
     <input
       type="text"
@@ -25,7 +25,7 @@
     />
     <button>{{ addBtnText }}</button>
     <hr />
-    <TheColumn v-for="(status, index) in statuses" :key="index" v-bind="status" />
+    <TdColumn v-for="(status, index) in statuses" :key="index" v-bind="status" />
   </main>
 </template>
 

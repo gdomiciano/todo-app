@@ -2,13 +2,13 @@
    <section>
     <h2>{{name}}</h2>
     <ul>
-        <TheItem v-for="item in currentItems" :key="item.id" v-bind="item"/>
+        <TdItem v-for="item in currentItems" :key="item.id" v-bind="item"/>
     </ul>
    </section>
 </template>
 
 <script setup>
-    import TheItem from '../TheItem/TheItem.vue';
+    import TdItem from '../TdItem/TdItem.vue';
     import { computed, ref } from 'vue';
     import getData from '../../composables/getData'
      const props = defineProps({

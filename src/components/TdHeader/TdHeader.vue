@@ -9,7 +9,7 @@
         </nav>
         <div>
             <input type="search" :placeholder="searchInputPlaceholder" v-model="searchQuery">
-            <button>{{searchBtnText}}</button>
+            <TdButton :label="searchBtnText" />
         </div>
         <select>
             <option v-for="lang in languages" :key="lang.value" :value="lang.value">{{lang.name}}</option>
@@ -18,6 +18,7 @@
 </template>
 
 <script setup>
+    import TdButton from '../TdButton/TdButton.vue'
 import { ref } from 'vue';
 
     const searchBtnText = 'Search Item'

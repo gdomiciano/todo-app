@@ -1,0 +1,46 @@
+:root {
+    --primary-color: #F2B705;
+    --secondary-color: #BF9004;
+    --font-color: #401801;
+    --bg-color: #F2DDD0;
+    --heading-color: #A63F03;
+    font-size: 10px;
+}
+
+[data-theme="dark"] {
+    --primary-color: #A63F03;
+    --secondary-color: #BF9004;
+    --font-color: #F2B705;
+    --bg-color: #260F01;
+    --heading-color: #F25C05;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
+
+input, select {
+    background-color: var(--bg-color);
+    border: var(--secondary-color) 2px solid;
+    border-radius: 6px;
+    filter: brightness(1.2);
+    padding: 6px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+::placeholder {
+    color: gray;
+}

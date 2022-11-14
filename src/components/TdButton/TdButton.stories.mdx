@@ -1,0 +1,18 @@
+<!-- TdButton.stories.mdx-->
+
+import { Meta, Story } from '@storybook/addon-docs';
+
+import TdButton from './TdButton.vue';
+
+<Meta title="Atoms/TdButton" component={TdButton} />
+
+# TdButton
+
+<Story name="Primary">
+  {() => {
+    return {
+      components: { TdButton },
+      template: `<TdButton label="TdButton Default" />`,
+    };
+  }}
+</Story>
