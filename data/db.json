@@ -1,5 +1,5 @@
 {
-    "statuses": ["todo", "progress", "done"],
+    "statuses": [{"name":"todo"}, {"name":"progress"}, {"name":"done"}],
     "items": [
         {"id":0,"text": "some text", "status": "done"},
         {"id":1,"text": "some text", "status": "progress"},

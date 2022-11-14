@@ -18,8 +18,11 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
     const searchBtnText = 'Search Item'
     const searchInputPlaceholder = 'find an item...'
+    const searchQuery = ref(null)
     const languages = [{
         value:'en',
         name:'English'
