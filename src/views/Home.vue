@@ -4,6 +4,7 @@ import TdColumn from "../components/TdColumn/TdColumn.vue";
 import getData from "../composables/getData";
 import { ref } from "vue";
 import TdButton from "../components/TdButton/TdButton.vue";
+import TdInput from "../components/TdInput/TdInput.vue";
 
 let addBtnText = "Add Item";
 let addInputPlaceholder = "write your todo item...";
@@ -16,14 +17,8 @@ const statuses = response;
 <template >
   <TdHeader />
   <main class="container">
-  <form @submit.prevent class="form">
-    <input
-      type="text"
-      name="add"
-      id="add"
-      :placeholder="addInputPlaceholder"
-      v-model="itemValue"
-    />
+  <form @submit.prevent class="container__form">
+    <TdInput :placeholder="addInputPlaceholder" name="add"  id="add" v-model="itemValue" />
     <TdButton :type="submit" :label="addBtnText"/>
   </form>
   <div class="container__columns">
@@ -37,13 +32,20 @@ const statuses = response;
 .container {
   width: 90%;
   display: grid;
-  gap:2em;
+  gap: 2rem;
   margin: 0 auto;
 }
+
+.container__form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+}
+
 .container__columns {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-gap: 2em;
+gap: 2rem;
 align-items: center;
 }
 </style>

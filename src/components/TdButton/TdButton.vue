@@ -29,8 +29,8 @@ function onClick() {
  .button {
     background-color: var(--primary-color);
     color: var(--font-color);
-    border-radius: 1em;
-    padding: 1em;
+    border-radius: 1rem;
+    padding: 1.8rem;
     border: none;
     cursor: pointer;
 }

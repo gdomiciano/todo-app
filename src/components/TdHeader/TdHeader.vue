@@ -11,9 +11,7 @@
             <input type="search" :placeholder="searchInputPlaceholder" v-model="searchQuery">
             <TdButton :label="searchBtnText" />
         </div> -->
-        <select class="header__lang">
-            <option v-for="lang in languages" :key="lang.value" :value="lang.value">{{lang.name}}</option>
-        </select>
+        <TdSelect v-bind:options="languages" />
     </header>
 </template>
 
@@ -21,6 +19,7 @@
     import TdButton from '../TdButton/TdButton.vue'
 import { ref } from 'vue';
 import getData from "../../composables/getData";
+import TdSelect from '../TdSelect/TdSelect.vue';
 
     const searchBtnText = 'Search Item'
     const searchInputPlaceholder = 'find an item...'
@@ -34,9 +33,10 @@ import getData from "../../composables/getData";
 <style lang="css" scoped>
 
 .header {
-  border-bottom: 3px inset var(--font-color) ;
+  border-bottom: 0.3rem inset var(--font-color) ;
   display: grid;
   grid-template-areas: "image navigation lang font theme";
+  margin-bottom: 2rem;
 }
 .header__image {
     grid-area: image;

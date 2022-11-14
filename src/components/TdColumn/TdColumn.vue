@@ -2,7 +2,7 @@
    <section class="column">
     <h2 class="column__title">{{name}}</h2>
     <ul class="column__items">
-        <TdItem v-for="item in currentItems" :key="item.id" v-bind="item" />
+        <TdItem v-for="item in currentItems" :key="item.id" v-bind:item="item" />
     </ul>
    </section>
 </template>
@@ -27,10 +27,10 @@
 .column {
     background-color: var(--bg-color);
     filter: brightness(0.95);
-    padding:1em;
-    border-radius: 10px;
+    padding:1rem;
+    border-radius: 1rem;
     display: grid;
-    box-shadow: inset var(--font-color) 2px -2px 6px;
+    box-shadow: inset var(--font-color) 0.2rem -0.2rem 0.6rem;
 }
 
 .column__title {

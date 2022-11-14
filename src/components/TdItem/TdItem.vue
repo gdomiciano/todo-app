@@ -1,14 +1,14 @@
 <template>
    <li class="item">
-        <input type="checkbox" name="" :id="`todo-item-${id}`" :value="id">
-        <label :for="`todo-item-${id}`">{{text}}</label>
+<TdCheckbox :id="item.id" :text="item.text" />
     </li>
 </template>
 
 <script setup>
+import TdCheckbox from '../TdCheckbox/TdCheckbox.vue';
+
     defineProps({
-        id: Number,
-        text: String
+        item: Object,
     })
 </script>
 
