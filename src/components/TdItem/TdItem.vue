@@ -1,5 +1,5 @@
 <template>
-   <li>
+   <li class="item">
         <input type="checkbox" name="" :id="`todo-item-${id}`" :value="id">
         <label :for="`todo-item-${id}`">{{text}}</label>
     </li>
@@ -12,6 +12,8 @@
     })
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="css" scoped>
+.item {
+    list-style: none;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <button :type="type" @click="onClick" class="td-button">{{ label }}</button>
+  <button :type="type" @click="onClick" class="button">{{ label }}</button>
 </template>
 
 <script setup>
@@ -25,10 +25,17 @@ function onClick() {
 }
 </script>
 
-<style scoped>
-.td-button {
-    background-color: blanchedalmond;
-    padding: 15px;
-    font-weight: bold;
+<style lang="css" scoped>
+ .button {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    border-radius: 1em;
+    padding: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    filter: brightness(1.1);
 }
 </style>
