@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <img src="assets/logo.svg" alt="" class="header__image">
+        <img src="../../assets/logo.png" alt="" class="header__image">
         <nav class="header__navigation">
             <ul>
                 <li>Home</li>
