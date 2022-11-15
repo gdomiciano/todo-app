@@ -15,7 +15,7 @@
     --heading-color: #F25C05;
 }
 
-body{
+body, #root{
     background-color: var(--bg-color);
     color: var(--font-color);
     font-size: 1.6rem;
