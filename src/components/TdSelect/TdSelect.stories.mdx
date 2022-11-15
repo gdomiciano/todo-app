@@ -6,4 +6,34 @@ import TdSelect from './TdSelect.vue';
 
 <Meta title="Atoms/TdSelect" component={TdSelect} />
 
+export const Template = (args) => ({
+  components: { TdSelect },
+  setup() {
+    return { args };
+  },
+  template: '<TdSelect v-bind="args" />',
+});
+
 # TdSelect
+
+<Story name="select"
+  args={{
+    options: [{
+        value: 0,
+        name: 'someText0'
+    },{
+        value: 1,
+        name: 'someText1'
+    },{
+        value: 2,
+        name: 'someText2'
+    },{
+        value: 3,
+        name: 'someText3'
+    },{
+        value: 4,
+        name: 'someText4'
+    }],
+  }}>
+  {Template.bind({})}
+</Story>

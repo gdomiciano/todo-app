@@ -6,13 +6,20 @@ import TdButton from './TdButton.vue';
 
 <Meta title="Atoms/TdButton" component={TdButton} />
 
+export const Template = (args) => ({
+  components: { TdButton },
+  setup() {
+    return { args };
+  },
+  template: '<TdButton v-bind="args" />',
+});
+
 # TdButton
 
-<Story name="Primary">
-  {() => {
-    return {
-      components: { TdButton },
-      template: `<TdButton label="TdButton Default" />`,
-    };
-  }}
+<Story name="button"
+  args={{
+    label: 'button default',
+    type: 'button'
+  }}>
+  {Template.bind({})}
 </Story>

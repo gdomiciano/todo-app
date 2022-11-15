@@ -4,6 +4,22 @@ import { Meta, Story } from '@storybook/addon-docs';
 
 import TdColumn from './TdColumn.vue';
 
+
 <Meta title="Organisms/TdColumn" component={TdColumn} />
 
+export const Template = (args) => ({
+  components: { TdColumn },
+  setup() {
+    return { args };
+  },
+  template: '<TdColumn v-bind="args" />',
+});
+
 # TdColumn
+
+<Story name="Primary"
+  args={{
+    label: 'primary',
+  }}>
+  {Template.bind({})}
+</Story>

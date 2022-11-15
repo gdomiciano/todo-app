@@ -6,4 +6,19 @@ import TdHeader from './TdHeader.vue';
 
 <Meta title="Organisms/TdHeader" component={TdHeader} />
 
+export const Template = (args) => ({
+  components: { TdHeader },
+  setup() {
+    return { args };
+  },
+  template: '<TdHeader v-bind="args" />',
+});
+
 # TdHeader
+
+<Story name="Primary"
+  args={{
+    label: 'primary',
+  }}>
+  {Template.bind({})}
+</Story>

@@ -1,6 +1,6 @@
 <template>
-   <li class="item">
-<TdCheckbox :id="item.id" :text="item.text" />
+    <li class="item">
+        <TdCheckbox :id="item.id" :text="item.text" />
     </li>
 </template>
 

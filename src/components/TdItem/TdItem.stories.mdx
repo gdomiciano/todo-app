@@ -6,4 +6,22 @@ import TdItem from './TdItem.vue';
 
 <Meta title="Molecules/TdItem" component={TdItem} />
 
+export const Template = (args) => ({
+  components: { TdItem },
+  setup() {
+    return { args };
+  },
+  template: '<TdItem v-bind="args" />',
+});
+
 # TdItem
+
+<Story name="Todo"
+  args={{
+    item: {
+        id: 0,
+        text: 'someText'
+    },
+  }}>
+  {Template.bind({})}
+</Story>

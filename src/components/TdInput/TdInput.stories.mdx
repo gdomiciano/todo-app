@@ -6,4 +6,22 @@ import TdInput from './TdInput.vue';
 
 <Meta title="Atoms/TdInput" component={TdInput} />
 
+export const Template = (args) => ({
+  components: { TdInput },
+  setup() {
+    return { args };
+  },
+  template: '<TdInput v-bind="args" />',
+});
+
 # TdInput
+
+<Story name="Primary"
+  args={{
+    type: 'text',
+    name: 'name of the input',
+    id: 0,
+    placeholder: 'type your text',
+  }}>
+  {Template.bind({})}
+</Story>

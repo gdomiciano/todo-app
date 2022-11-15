@@ -6,4 +6,20 @@ import TdCheckbox from './TdCheckbox.vue';
 
 <Meta title="Atoms/TdCheckbox" component={TdCheckbox} />
 
+export const Template = (args) => ({
+  components: { TdCheckbox },
+  setup() {
+    return { args };
+  },
+  template: '<TdCheckbox v-bind="args" />',
+});
+
 # TdCheckbox
+
+<Story name="Primary"
+  args={{
+    id: 0,
+    text: 'sample text for the checkbox'
+  }}>
+  {Template.bind({})}
+</Story>
