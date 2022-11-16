@@ -43,8 +43,8 @@
   "readme": "ERROR: No README data found!",
   "_id": "todo-app@0.1.0",
 
-    "lint-staged": {
-      "*": "npm run lint:fix"
-    }
+  "lint-staged": {
+    "*": "npm run lint:fix"
+  }
 
 }
