@@ -1,31 +1,31 @@
-<script setup>
-import TdHeader from "../components/TdHeader/TdHeader.vue";
-import TdColumn from "../components/TdColumn/TdColumn.vue";
-import getData from "../composables/getData";
-import { ref } from "vue";
-import TdButton from "../components/TdButton/TdButton.vue";
-import TdInput from "../components/TdInput/TdInput.vue";
-
-let addBtnText = "Add Item";
-let addInputPlaceholder = "write your todo item...";
-const itemValue = ref(null);
-const { response, error, load } = getData();
-load("statuses");
-const statuses = response;
-</script>
-
-<template >
+<template>
   <TdHeader />
   <main class="container">
-  <form @submit.prevent class="container__form">
-    <TdInput :placeholder="addInputPlaceholder" name="add"  id="add" v-model="itemValue" />
-    <TdButton :type="submit" :label="addBtnText"/>
-  </form>
-  <div class="container__columns">
-    <TdColumn v-for="(status, index) in statuses" :key="index" v-bind="status" />
-  </div>
+    <form @submit.prevent class="container__form">
+        <TdInput :placeholder="addInputPlaceholder" name="add"  id="add" v-model="itemValue" />
+        <TdButton type="submit" :label="addBtnText"/>
+    </form>
+    <div class="container__columns">
+      <TdColumn v-for="(status, index) in statuses" :key="index" v-bind="status" />
+    </div>
   </main>
 </template>
+
+  <script setup>
+  import TdHeader from "../components/TdHeader/TdHeader.vue";
+  import TdColumn from "../components/TdColumn/TdColumn.vue";
+  import getData from "../composables/getData";
+  import { ref } from "vue";
+  import TdButton from "../components/TdButton/TdButton.vue";
+  import TdInput from "../components/TdInput/TdInput.vue";
+
+  let addBtnText = "Add Item";
+  let addInputPlaceholder = "write your todo item...";
+  const itemValue = ref(null);
+  const { response, error, load } = getData();
+  load("statuses");
+  const statuses = response;
+  </script>
 
 <style scoped>
 

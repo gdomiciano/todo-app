@@ -10,7 +10,8 @@
     "start:server": "json-server --watch data/db.json  ",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "chromatic": "npx chromatic --project-token=1d4658360bf8"
   },
   "dependencies": {
     "json-server": "^0.17.1",
@@ -33,5 +34,7 @@
     "chromatic": "^6.11.4",
     "vite": "^3.2.3",
     "vue-loader": "^16.8.3"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "todo-app@0.1.0"
 }

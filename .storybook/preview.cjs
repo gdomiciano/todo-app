@@ -8,7 +8,6 @@ export const parameters = {
   },
   backgrounds: {
     disable: true,
-    default: '#fff'
   },
   layout: 'centered',
 }

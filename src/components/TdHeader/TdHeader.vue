@@ -3,31 +3,37 @@
         <img src="../../assets/logo.png" alt="" class="header__image">
         <nav class="header__navigation">
             <ul>
-                <li>Home</li>
+                <li>
+                    <a href="#main" ref="skipLink">Skip to main content</a>
+                </li>
+                <li> <a href="#main" ref="a11yLink">Skip to main content</a></li>
                 <li>About</li>
             </ul>
         </nav>
-        <!-- <div class="header__search">
-            <input type="search" :placeholder="searchInputPlaceholder" v-model="searchQuery">
-            <TdButton :label="searchBtnText" />
-        </div> -->
         <TdSelect v-bind:options="languages" />
+        <TdSwitch on-text="On" off-text="off" label="Dark theme" @toggle="toggleTheme" />
     </header>
 </template>
 
 <script setup>
-    import TdButton from '../TdButton/TdButton.vue'
-import { ref } from 'vue';
+    import TdSwitch from '../TdSwitch/TdSwitch.vue'
 import getData from "../../composables/getData";
 import TdSelect from '../TdSelect/TdSelect.vue';
-
-    const searchBtnText = 'Search Item'
-    const searchInputPlaceholder = 'find an item...'
-    const searchQuery = ref(null)
 
     const { response, error, load } = getData();
     load("languages");
     const languages = response;
+
+    function toggleTheme(isDarkTheme) {
+        console.log('called theme changes', isDarkTheme)
+        if (document.firstElementChild.getAttribute('dataTheme')) document.firstElementChild.removeAttribute('data-theme');
+
+        if(isDarkTheme) {
+            document.firstElementChild.setAttribute('data-theme', 'dark')
+        } else {
+            document.firstElementChild.setAttribute('data-theme', 'light')
+        }
+    }
 </script>
 
 <style lang="css" scoped>
@@ -35,7 +41,6 @@ import TdSelect from '../TdSelect/TdSelect.vue';
 .header {
   border-bottom: 0.3rem inset var(--font-color) ;
   display: grid;
-  grid-template-areas: "image navigation lang font theme";
   margin-bottom: 2rem;
 }
 .header__image {

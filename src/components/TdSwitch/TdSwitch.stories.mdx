@@ -1,0 +1,26 @@
+<!-- TdSwitch.stories.mdx-->
+
+import { Meta, Story } from '@storybook/addon-docs';
+
+import TdSwitch from './TdSwitch.vue';
+
+<Meta title="Atoms/TdSwitch" component={TdSwitch} />
+
+export const Template = (args) => ({
+  components: { TdSwitch },
+  setup() {
+    return { args };
+  },
+  template: '<TdSwitch v-bind="args" />'
+});
+
+# TdSwitch
+
+<Story name="button"
+  args={{
+    label: 'Dark Theme',
+    onText: 'Dark'
+    onText: 'Light'
+  }}>
+  {Template.bind({})}
+</Story>

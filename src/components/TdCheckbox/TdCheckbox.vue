@@ -6,7 +6,8 @@
 <script setup>
     defineProps({
         id: Number,
-        text: String
+        text: String,
+        isMixedState: Boolean
     })
 </script>
 
