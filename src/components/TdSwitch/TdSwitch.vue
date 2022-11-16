@@ -20,9 +20,18 @@ import { ref } from 'vue';
 
 const emit = defineEmits(['toggle'])
 defineProps({
-    onText: String,
-    offText: String,
-    label: String
+    onText: {
+      type: String,
+      default: 'On'
+    },
+    offText: {
+      type: String,
+      default: 'Off'
+    },
+    label: {
+      type: String,
+      required: true
+    }
 })
 
 const isChecked = ref(null);

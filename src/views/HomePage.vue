@@ -26,7 +26,7 @@
   </main>
 </template>
 
-  <script setup>
+<script setup>
   import TdHeader from "../components/TdHeader/TdHeader.vue";
   import TdColumn from "../components/TdColumn/TdColumn.vue";
   import getData from "../composables/getData";
@@ -36,8 +36,9 @@
 
   let addBtnText = "Add Item";
   let addInputPlaceholder = "write your todo item...";
+
   const itemValue = ref(null);
-  const { response, error, load } = getData();
+  const { response, load } = getData();
   load("statuses");
   const statuses = response;
   </script>

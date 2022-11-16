@@ -13,7 +13,8 @@
     "test-storybook": "test-storybook",
     "chromatic": "npx chromatic --project-token=1d4658360bf8",
     "lint": "eslint --ext .js,.vue src",
-    "lint:fix": "eslint --ext .js,.vue src --fix"
+    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "json-server": "^0.17.1",
@@ -36,15 +37,11 @@
     "chromatic": "^6.11.4",
     "eslint": "^8.27.0",
     "eslint-plugin-vue": "^9.7.0",
+    "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
     "vite": "^3.2.3",
     "vue-loader": "^16.8.3"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "todo-app@0.1.0",
-
-  "lint-staged": {
-    "*": "npm run lint:fix"
-  }
-
+  "_id": "todo-app@0.1.0"
 }

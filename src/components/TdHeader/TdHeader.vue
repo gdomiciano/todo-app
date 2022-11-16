@@ -37,7 +37,7 @@
 import getData from "../../composables/getData";
 import TdSelect from '../TdSelect/TdSelect.vue';
 
-    const { response, error, load } = getData();
+    const { response, load } = getData();
     load("languages");
     const languages = response;
 

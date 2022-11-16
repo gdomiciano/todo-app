@@ -16,15 +16,15 @@ defineProps({
     },
     name: {
         type: String,
-        require: true
+        required: true
     },
     id: {
         type: String,
-        require: true
+        required: true
     },
     placeholder: {
         type: String,
-        require: true
+        required: true
     }
 })
 </script>

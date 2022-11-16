@@ -11,7 +11,10 @@
 import TdCheckbox from '../TdCheckbox/TdCheckbox.vue';
 
     defineProps({
-        item: Object,
+        item: {
+          type: Object,
+          required: true
+        }
     })
 </script>
 

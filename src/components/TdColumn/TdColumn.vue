@@ -15,13 +15,16 @@
 
 <script setup>
     import TdItem from '../TdItem/TdItem.vue';
-    import { computed, ref } from 'vue';
+    import { computed } from 'vue';
     import getData from '../../composables/getData'
      const props = defineProps({
-        name: String,
+        name: {
+          type: String,
+          required: true
+        }
     })
 
-    const {response, error, load} = getData();
+    const {response, load} = getData();
     load('items');
 
     const currentItems = computed(() => {

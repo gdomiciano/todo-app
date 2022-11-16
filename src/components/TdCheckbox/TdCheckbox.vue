@@ -14,9 +14,18 @@
 
 <script setup>
     defineProps({
-        id: Number,
-        text: String,
-        isMixedState: Boolean
+        id: {
+          type:Number,
+          required:true
+        },
+        text: {
+          type: String,
+          required: true
+        },
+        isMixedState: {
+          type: Boolean,
+          default: false
+        }
     })
 </script>
 
