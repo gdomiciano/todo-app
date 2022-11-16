@@ -1,15 +1,27 @@
 <template>
   <header class="header">
-    <img src="../../assets/logo_128.png" alt="" class="header__image">
+    <img
+      src="../../assets/logo_128.png"
+      alt=""
+      class="header__image"
+    >
     <nav class="header__navigation">
       <ul>
         <li>
-          <a ref="skipLink" href="#main">Skip to main content</a>
+          <a
+            ref="skipLink"
+            href="#main"
+          >Skip to main content</a>
         </li>
       </ul>
     </nav>
     <TdSelect :options="languages" />
-    <TdSwitch on-text="On" off-text="off" label="Dark theme" @toggle="toggleTheme" />
+    <TdSwitch
+      on-text="On"
+      off-text="off"
+      label="Dark theme"
+      @toggle="toggleTheme"
+    />
   </header>
 </template>
 

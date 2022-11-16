@@ -1,12 +1,30 @@
 <template>
   <TdHeader />
-  <main class="container" role="main">
-    <form class="container__form" @submit.prevent>
-      <TdInput id="add" v-model="itemValue" :placeholder="addInputPlaceholder" name="add" />
-      <TdButton type="submit" :label="addBtnText" />
+  <main
+    class="container"
+    role="main"
+  >
+    <form
+      class="container__form"
+      @submit.prevent
+    >
+      <TdInput
+        id="add"
+        v-model="itemValue"
+        :placeholder="addInputPlaceholder"
+        name="add"
+      />
+      <TdButton
+        type="submit"
+        :label="addBtnText"
+      />
     </form>
     <div class="container__columns">
-      <TdColumn v-for="(status, index) in statuses" :key="index" v-bind="status" />
+      <TdColumn
+        v-for="(status, index) in statuses"
+        :key="index"
+        v-bind="status"
+      />
     </div>
   </main>
 </template>
