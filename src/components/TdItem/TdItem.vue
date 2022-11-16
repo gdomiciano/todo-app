@@ -1,7 +1,10 @@
 <template>
-    <li class="item">
-        <TdCheckbox :id="item.id" :text="item.text" />
-    </li>
+  <li class="item">
+    <TdCheckbox
+      :id="item.id"
+      :text="item.text"
+    />
+  </li>
 </template>
 
 <script setup>

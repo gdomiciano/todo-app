@@ -1,11 +1,11 @@
 <template>
-    <input
+  <input
+    :id="id"
     class="input"
-      :type="type"
-      :name="name"
-      :id="id"
-      :placeholder="placeholder"
-    />
+    :type="type"
+    :name="name"
+    :placeholder="placeholder"
+  >
 </template>
 
 <script setup>

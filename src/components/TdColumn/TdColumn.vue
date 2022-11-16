@@ -1,10 +1,16 @@
 <template>
-   <section class="column">
-    <h2 class="column__title">{{name}}</h2>
+  <section class="column">
+    <h2 class="column__title">
+      {{ name }}
+    </h2>
     <ul class="column__items">
-        <TdItem v-for="item in currentItems" :key="item.id" v-bind:item="item" />
+      <TdItem
+        v-for="item in currentItems"
+        :key="item.id"
+        :item="item"
+      />
     </ul>
-   </section>
+  </section>
 </template>
 
 <script setup>

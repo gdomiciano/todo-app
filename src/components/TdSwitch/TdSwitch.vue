@@ -1,9 +1,18 @@
 <template>
-<button role="switch" :aria-checked="`${isChecked}`" id="pageTheme" class="switch" @click="onSwitchClick">
-  <span class="switch__state">{{offText}}</span>
-  <span class="switch__state">{{onText}}</span>
-</button>
-<label for="pageTheme" class="switch__label"> {{label}}</label>
+  <button
+    id="pageTheme"
+    role="switch"
+    :aria-checked="`${isChecked}`"
+    class="switch"
+    @click="onSwitchClick"
+  >
+    <span class="switch__state">{{ offText }}</span>
+    <span class="switch__state">{{ onText }}</span>
+  </button>
+  <label
+    for="pageTheme"
+    class="switch__label"
+  > {{ label }}</label>
 </template>
 
 <script setup>

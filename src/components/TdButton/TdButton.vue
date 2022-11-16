@@ -1,5 +1,11 @@
 <template>
-  <button :type="type" @click="onClick" class="button">{{ label }}</button>
+  <button
+    :type="type"
+    class="button"
+    @click="onClick"
+  >
+    {{ label }}
+  </button>
 </template>
 
 <script setup>

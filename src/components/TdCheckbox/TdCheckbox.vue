@@ -1,6 +1,15 @@
 <template>
-     <input type="checkbox" :name="`todo-item-${id}`" :id="`todo-item-${id}`" :value="id" class="checkbox__input">
-     <label :for="`todo-item-${id}`" class="checkbox__label">{{text}}</label>
+  <input
+    :id="`todo-item-${id}`"
+    type="checkbox"
+    :name="`todo-item-${id}`"
+    :value="id"
+    class="checkbox__input"
+  >
+  <label
+    :for="`todo-item-${id}`"
+    class="checkbox__label"
+  >{{ text }}</label>
 </template>
 
 <script setup>

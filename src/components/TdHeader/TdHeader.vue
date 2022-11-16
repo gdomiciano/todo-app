@@ -1,18 +1,35 @@
 <template>
-    <header class="header">
-        <img src="../../assets/logo.png" alt="" class="header__image">
-        <nav class="header__navigation">
-            <ul>
-                <li>
-                    <a href="#main" ref="skipLink">Skip to main content</a>
-                </li>
-                <li> <a href="#main" ref="a11yLink">Skip to main content</a></li>
-                <li>About</li>
-            </ul>
-        </nav>
-        <TdSelect v-bind:options="languages" />
-        <TdSwitch on-text="On" off-text="off" label="Dark theme" @toggle="toggleTheme" />
-    </header>
+  <header class="header">
+    <img
+      src="../../assets/logo.png"
+      alt=""
+      class="header__image"
+    >
+    <nav class="header__navigation">
+      <ul>
+        <li>
+          <a
+            ref="skipLink"
+            href="#main"
+          >Skip to main content</a>
+        </li>
+        <li>
+          <a
+            ref="a11yLink"
+            href="#main"
+          >Skip to main content</a>
+        </li>
+        <li>About</li>
+      </ul>
+    </nav>
+    <TdSelect :options="languages" />
+    <TdSwitch
+      on-text="On"
+      off-text="off"
+      label="Dark theme"
+      @toggle="toggleTheme"
+    />
+  </header>
 </template>
 
 <script setup>
