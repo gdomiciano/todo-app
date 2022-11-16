@@ -1,27 +1,12 @@
 <template>
   <TdHeader />
-  <main class="container">
-    <form
-      class="container__form"
-      @submit.prevent
-    >
-      <TdInput
-        id="add"
-        v-model="itemValue"
-        :placeholder="addInputPlaceholder"
-        name="add"
-      />
-      <TdButton
-        type="submit"
-        :label="addBtnText"
-      />
+  <main class="container" role="main">
+    <form class="container__form" @submit.prevent>
+      <TdInput id="add" v-model="itemValue" :placeholder="addInputPlaceholder" name="add" />
+      <TdButton type="submit" :label="addBtnText" />
     </form>
     <div class="container__columns">
-      <TdColumn
-        v-for="(status, index) in statuses"
-        :key="index"
-        v-bind="status"
-      />
+      <TdColumn v-for="(status, index) in statuses" :key="index" v-bind="status" />
     </div>
   </main>
 </template>
@@ -41,27 +26,32 @@
   const { response, load } = getData();
   load("statuses");
   const statuses = response;
-  </script>
+</script>
 
 <style scoped>
 
-.container {
-  width: 90%;
-  display: grid;
-  gap: 2rem;
-  margin: 0 auto;
-}
+  .container {
+    width: 90%;
+    display: grid;
+    gap: 2rem;
+    margin: 0 auto;
+    grid-template-rows: auto 1fr;
+  }
 
-.container__form {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2rem;
-}
+  .container__form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+  }
 
-.container__columns {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 2rem;
-align-items: center;
-}
+  .container__columns {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+
+    @media screen (min-width: 768px) {
+      grid-template-columns: repeat(3, auto);
+
+    }
+  }
 </style>

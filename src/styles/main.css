@@ -11,8 +11,13 @@
     --primary-color: #A63F03;
     --secondary-color: #BF9004;
     --font-color: #F2B705;
-    --bg-color: #260F01;
+    --bg-color: #212121;
     --heading-color: #F25C05;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body, #root{
@@ -24,6 +29,7 @@ body, #root{
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--heading-color);
+    font-family: cursive;
 }
 
 ::placeholder {

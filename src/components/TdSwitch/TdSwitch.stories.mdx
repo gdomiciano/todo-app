@@ -11,7 +11,7 @@ export const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: '<TdSwitch v-bind="args" />'
+  template: '<TdSwitch v-bind="args"/>'
 });
 
 # TdSwitch
@@ -19,7 +19,7 @@ export const Template = (args) => ({
 <Story name="button"
   args={{
     label: 'Dark Theme',
-    onText: 'Dark'
+    onText: 'Dark',
     onText: 'Light'
   }}>
   {Template.bind({})}

@@ -34,8 +34,7 @@ defineProps({
     }
 })
 
-const isChecked = ref(null);
-
+const isChecked = ref(false);
 
 function onSwitchClick () {
     if (isChecked.value) {
