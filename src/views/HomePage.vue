@@ -1,9 +1,9 @@
 <template>
   <TdHeader />
   <main
+    id="main"
     class="container"
     role="main"
-    id="main"
   >
     <form
       class="container__form"
