@@ -2,3 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm run lint:fix
+# git commit -am ":rotating_light: fix lint issues"

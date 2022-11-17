@@ -44,13 +44,13 @@
   .input {
     display: grid;
     gap: var(--base-spacing);
-    font-size: 1.6rem;
   }
 
   .input__field {
-    border: var(--secondary-color) 0.2rem solid;
+    border: var(--primary-color) 0.2rem solid;
     border-radius: 0.6rem;
     padding: var(--small-spacing);
     background-color: var(--white-color);
+    font-size: 1.6rem;
   }
 </style>

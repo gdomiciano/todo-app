@@ -28,28 +28,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1.6rem;
 }
 
 body, #root{
     background-color: var(--bg-color);
     color: var(--font-color);
-    font-size: 1.6rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--heading-color);
     font-family: cursive;
+    font-size: initial;
 }
 
 ::placeholder {
-    color: gray;
+    color: var(--secondary-color);
 }
 
 a {
     color: var(--font-color);
 }
 
-a::hover {
-    color: var(--heading-color
-    )
+a:hover {
+    color: var(--heading-color)
+}

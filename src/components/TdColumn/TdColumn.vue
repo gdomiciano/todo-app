@@ -40,6 +40,8 @@
     border-radius: 0.6rem;
     display: grid;
     box-shadow: inset var(--font-color) 0.2rem -0.2rem 0.6rem;
+    grid-template-rows: auto 1fr;
+    gap: var(--medium-spacing);
   }
 
   .column__title {
@@ -50,6 +52,15 @@
   }
 
   .column__items {
-    padding: 0;
+    display: grid;
+    gap: var(--base-spacing);
+    grid-auto-flow: dense;
+  }
+
+  @media screen and (min-width: 768px) {
+    .column {
+      height: calc(100vh - 400px);
+      /* height: calc(100vh - bind(offset)); */
+    }
   }
 </style>

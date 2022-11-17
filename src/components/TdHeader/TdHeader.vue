@@ -83,6 +83,8 @@
     }
     .header__options {
       grid-template-columns: repeat(3, minmax(min-content, 1fr));
+      align-items: center;
+      justify-items: space-between;
     }
   }
 </style>

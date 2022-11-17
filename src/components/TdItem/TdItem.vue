@@ -8,18 +8,22 @@
 </template>
 
 <script setup>
-import TdCheckbox from '../TdCheckbox/TdCheckbox.vue';
+  import TdCheckbox from "../TdCheckbox/TdCheckbox.vue";
 
-    defineProps({
-        item: {
-          type: Object,
-          required: true
-        }
-    })
+  defineProps({
+    item: {
+      type: Object,
+      required: true,
+    },
+  });
 </script>
 
 <style lang="css" scoped>
-.item {
+  .item {
     list-style: none;
-}
+    display: grid;
+    gap: var(--xmall-spacing);
+    grid-template-columns: auto 1fr;
+    justify-content: left;
+  }
 </style>

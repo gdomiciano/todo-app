@@ -51,11 +51,9 @@
 
 <style lang="css" scoped>
   .switch {
-    margin: 0;
-    padding: 0;
     border: 0.2rem solid var(--secondary-color);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, auto);
     line-height: var(--medium-spacing);
     font-size: 1.6rem;
     background-color: var(--white-color);
