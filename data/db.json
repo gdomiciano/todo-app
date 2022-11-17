@@ -7,14 +7,14 @@
     ],
     "languages": [{
         "value":"en",
-        "name":"English"
+        "name":"🇺🇸 English"
     },
     {
         "value":"pt_br",
-        "name":"Português (Brasil)"
+        "name":"🇧🇷 Português (Brasil)"
     },
     {
         "value":"sv",
-        "name":"Svenska"
+        "name":"🇸🇪 Svenska"
     }]
 }

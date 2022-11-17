@@ -5,25 +5,17 @@
       alt="yellow post-it block with the first note containing an orange check sign and ready to be pulled out of the block."
       class="header__image"
       aria-hidden="true"
-    >
+    />
     <div class="header__options">
       <nav class="header__navigation">
         <ul>
           <li class="header__navigation-item">
-            <a
-              ref="skipLink"
-              href="#main"
-            >Skip to main content</a>
+            <a ref="skipLink" href="#main">Skip to main content</a>
           </li>
         </ul>
       </nav>
       <TdSelect :options="languages" />
-      <TdSwitch
-        on-text="On"
-        off-text="off"
-        label="Dark theme"
-        @toggle="toggleTheme"
-      />
+      <TdSwitch on-text="On" off-text="off" label="Dark theme" @toggle="toggleTheme" />
     </div>
   </header>
 </template>
@@ -66,6 +58,10 @@
   .header__options {
     display: grid;
     gap: 1.4rem;
+  }
+
+  .header__navigation-item {
+    list-style: none;
   }
 
   @media screen and (min-width: 768px) {
