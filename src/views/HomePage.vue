@@ -3,6 +3,7 @@
   <main
     class="container"
     role="main"
+    id="main"
   >
     <form
       class="container__form"
@@ -67,9 +68,10 @@
     gap: 2rem;
     align-items: center;
 
-    @media screen (min-width: 768px) {
+  }
+  @media screen and (min-width: 768px) {
+    .container__columns {
       grid-template-columns: repeat(3, auto);
-
     }
   }
 </style>
