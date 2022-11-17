@@ -1,6 +1,9 @@
 <template>
   <div>
-    <label for="pageTheme" class="switch__label"> {{ label }}</label>
+    <label
+      for="pageTheme"
+      class="switch__label"
+    > {{ label }}</label>
     <button
       id="pageTheme"
       role="switch"

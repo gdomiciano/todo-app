@@ -4,7 +4,11 @@
       {{ name }}
     </h2>
     <ul class="column__items">
-      <TdItem v-for="item in currentItems" :key="item.id" :item="item" />
+      <TdItem
+        v-for="item in currentItems"
+        :key="item.id"
+        :item="item"
+      />
     </ul>
   </section>
 </template>
