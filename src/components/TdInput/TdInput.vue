@@ -1,6 +1,9 @@
 <template>
   <div class="input">
-    <label :for="id" class="input__label">{{ label }}</label>
+    <label
+      :for="id"
+      class="input__label"
+    >{{ label }}</label>
     <input
       :id="id"
       class="input__field"
@@ -8,7 +11,7 @@
       :name="name"
       :placeholder="placeholder"
       v-bind="$attrs"
-    />
+    >
   </div>
 </template>
 
