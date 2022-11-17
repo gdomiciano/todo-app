@@ -1,10 +1,6 @@
 <template>
   <select class="select">
-    <option
-      v-for="option in options"
-      :key="option.value"
-      :value="option.value"
-    >
+    <option v-for="option in options" :key="option.value" :value="option.value">
       {{ option.name }}
     </option>
   </select>
@@ -22,7 +18,7 @@
 <style lang="css" scoped>
   .select {
     border: 1px solid var(--primary-color);
-    padding: 1.4rem;
+    padding: 1rem;
     font-size: 1.6rem;
     border-radius: 4px;
     width: max-content;

@@ -1,88 +1,84 @@
 <template>
-  <button
-    id="pageTheme"
-    role="switch"
-    :aria-checked="`${isChecked}`"
-    class="switch"
-    @click="onSwitchClick"
-  >
-    <span class="switch__state">{{ offText }}</span>
-    <span class="switch__state">{{ onText }}</span>
-  </button>
-  <label
-    for="pageTheme"
-    class="switch__label"
-  > {{ label }}</label>
+  <div>
+    <label for="pageTheme" class="switch__label"> {{ label }}</label>
+    <button
+      id="pageTheme"
+      role="switch"
+      :aria-checked="`${isChecked}`"
+      class="switch"
+      @click="onSwitchClick"
+    >
+      <span class="switch__state">{{ offText }}</span>
+      <span class="switch__state">{{ onText }}</span>
+    </button>
+  </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+  import { ref } from "vue";
 
-const emit = defineEmits(['toggle'])
-defineProps({
+  const emit = defineEmits(["toggle"]);
+  defineProps({
     onText: {
       type: String,
-      default: 'On'
+      default: "On",
     },
     offText: {
       type: String,
-      default: 'Off'
+      default: "Off",
     },
     label: {
       type: String,
-      required: true
-    }
-})
+      required: true,
+    },
+  });
 
-const isChecked = ref(false);
+  const isChecked = ref(false);
 
-function onSwitchClick () {
+  function onSwitchClick() {
     if (isChecked.value) {
-        isChecked.value = false;
+      isChecked.value = false;
     } else {
-        isChecked.value = true;
+      isChecked.value = true;
     }
 
-    emit('toggle', isChecked.value)
-}
-
+    emit("toggle", isChecked.value);
+  }
 </script>
 
 <style lang="css" scoped>
-.switch {
-  margin: 0;
-  padding: 0;
-  width: 7rem;
-  height: 2.6rem;
-  border: .2rem solid var(--secondary-color);
-  display: inline-block;
-  margin-right: 0.25rem;
-  line-height: 2rem;
-  vertical-align: middle;
-  text-align: center;
-  font: 1.4rem;
-}
+  .switch {
+    margin: 0;
+    padding: 0;
+    border: 0.2rem solid var(--secondary-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    line-height: 2rem;
+    font-size: 1.6rem;
+  }
 
-.switch__state {
-  padding: 0 4rem;
-  pointer-events: none;
-}
+  .switch__state {
+    display: inline-block;
+    padding: 0 2rem;
+    pointer-events: none;
+    text-transform: capitalize;
+  }
 
-[role="switch"][aria-checked="false"] :first-child,
-[role="switch"][aria-checked="true"] :last-child {
-  background: var(--primary-color);
-  color: var(--font-color);
-}
+  [role="switch"][aria-checked="false"] :first-child,
+  [role="switch"][aria-checked="true"] :last-child {
+    background: var(--primary-color);
+    color: var(--font-color);
+  }
 
-[role="switch"][aria-checked="false"] :last-child,
-[role="switch"][aria-checked="true"] :first-child {
-  color: --font-color;
-}
+  [role="switch"][aria-checked="false"] :last-child,
+  [role="switch"][aria-checked="true"] :first-child {
+    color: --font-color;
+  }
 
-.switch__label {
-  font: 16rem;
-  line-height: 2rem;
-  vertical-align: middle;
-  user-select: none;
-}
+  .switch__label {
+    font: 16rem;
+    line-height: 2rem;
+    vertical-align: middle;
+    user-select: none;
+  }
 </style>

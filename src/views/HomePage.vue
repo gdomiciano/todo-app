@@ -1,31 +1,19 @@
 <template>
   <TdHeader />
-  <main
-    id="main"
-    class="container"
-    role="main"
-  >
-    <form
-      class="container__form"
-      @submit.prevent
-    >
+  <main id="main" class="container" role="main">
+    <h1>Todo Kanban App</h1>
+    <form class="container__form" @submit.prevent>
       <TdInput
         id="add"
         v-model="itemValue"
         :placeholder="addInputPlaceholder"
         name="add"
+        label="What do you have todo?"
       />
-      <TdButton
-        type="submit"
-        :label="addBtnText"
-      />
+      <TdButton type="submit" :label="addBtnText" />
     </form>
     <div class="container__columns">
-      <TdColumn
-        v-for="(status, index) in statuses"
-        :key="index"
-        v-bind="status"
-      />
+      <TdColumn v-for="(status, index) in statuses" :key="index" v-bind="status" />
     </div>
   </main>
 </template>
@@ -48,7 +36,6 @@
 </script>
 
 <style scoped>
-
   .container {
     width: 90%;
     display: grid;
@@ -61,13 +48,14 @@
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: end;
   }
 
   .container__columns {
     display: grid;
     gap: 2rem;
     align-items: center;
-
   }
   @media screen and (min-width: 768px) {
     .container__columns {
