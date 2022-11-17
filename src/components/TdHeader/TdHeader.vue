@@ -5,25 +5,17 @@
       alt="yellow post-it block with the first note containing an orange check sign and ready to be pulled out of the block."
       class="header__image"
       aria-hidden="true"
-    >
+    />
     <div class="header__options">
       <nav class="header__navigation">
         <ul>
           <li class="header__navigation-item">
-            <a
-              ref="skipLink"
-              href="#main"
-            >Skip to main content</a>
+            <a ref="skipLink" href="#main">Skip to main content</a>
           </li>
         </ul>
       </nav>
       <TdSelect :options="languages" />
-      <TdSwitch
-        on-text="On"
-        off-text="off"
-        label="Dark theme"
-        @toggle="toggleTheme"
-      />
+      <TdSwitch on-text="On" off-text="off" label="Dark theme" @toggle="toggleTheme" />
     </div>
   </header>
 </template>
@@ -55,18 +47,19 @@
     border-bottom: 0.3rem dashed var(--font-color);
     box-shadow: var(--heading-color) 0px 0px 10px;
     display: grid;
-    margin-bottom: 3rem;
-    padding: 2rem 0;
+    margin-bottom: var(--large-spacing);
+    padding: var(--medium-spacing) 0;
     grid-template-columns: min-content auto;
     justify-content: space-evenly;
     align-items: center;
+    gap: var(--medium-spacing);
   }
   .header__image {
     width: 64px;
   }
   .header__options {
     display: grid;
-    gap: 1.4rem;
+    gap: var(--base-spacing);
   }
 
   .header__navigation-item {
@@ -75,7 +68,7 @@
 
   @media screen and (min-width: 768px) {
     .header {
-      padding: 2rem;
+      padding: var(--medium-spacing);
     }
     .header__image {
       width: unset;

@@ -1,9 +1,5 @@
 <template>
-  <button
-    :type="type"
-    class="button"
-    @click="onClick"
-  >
+  <button :type="type" class="button" @click="onClick">
     {{ label }}
   </button>
 </template>
@@ -35,10 +31,10 @@
   .button {
     background-color: var(--primary-color);
     color: var(--font-color);
-    border-radius: 1rem;
+    border-radius: 0.6rem;
     font-size: 1.6rem;
-    line-height: 4rem;
-    padding: 0 2rem;
+    line-height: var(--xlarge-spacing);
+    padding: 0 var(--medium-spacing);
     border: none;
     cursor: pointer;
   }

@@ -1,9 +1,6 @@
 <template>
   <div class="input">
-    <label
-      :for="id"
-      class="input__label"
-    >{{ label }}</label>
+    <label :for="id" class="input__label">{{ label }}</label>
     <input
       :id="id"
       class="input__field"
@@ -11,7 +8,7 @@
       :name="name"
       :placeholder="placeholder"
       v-bind="$attrs"
-    >
+    />
   </div>
 </template>
 
@@ -43,15 +40,14 @@
 <style lang="css" scoped>
   .input {
     display: grid;
-    gap: 1.4rem;
+    gap: var(--base-spacing);
+    font-size: 1.6rem;
   }
 
   .input__field {
-    background-color: var(--bg-color);
     border: var(--secondary-color) 0.2rem solid;
-    border-radius: 6px;
-    filter: brightness(1.2);
-    padding: 1rem;
-    font-size: 1.6rem;
+    border-radius: 0.6rem;
+    padding: var(--small-spacing);
+    background-color: var(--white-color);
   }
 </style>

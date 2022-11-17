@@ -53,7 +53,7 @@
   .container {
     width: 90%;
     display: grid;
-    gap: 2rem;
+    gap: var(--medium-spacing);
     margin: 0 auto;
     grid-template-rows: auto 1fr;
   }
@@ -61,14 +61,14 @@
   .container__form {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: var(--medium-spacing);
+    margin-bottom: var(--large-spacing);
     align-items: end;
   }
 
   .container__columns {
     display: grid;
-    gap: 2rem;
+    gap: var(--medium-spacing);
     align-items: center;
   }
   @media screen and (min-width: 768px) {

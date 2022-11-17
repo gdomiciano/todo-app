@@ -1,9 +1,6 @@
 <template>
   <div>
-    <label
-      for="pageTheme"
-      class="switch__label"
-    > {{ label }}</label>
+    <label for="pageTheme" class="switch__label"> {{ label }}</label>
     <button
       id="pageTheme"
       role="switch"
@@ -56,8 +53,9 @@
     border: 0.2rem solid var(--secondary-color);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    line-height: 2rem;
+    line-height: var(--medium-spacing);
     font-size: 1.6rem;
+    background-color: var(--white-color);
   }
 
   .switch__state {
@@ -80,7 +78,7 @@
 
   .switch__label {
     font: 16rem;
-    line-height: 2rem;
+    line-height: var(--medium-spacing);
     vertical-align: middle;
     user-select: none;
   }
