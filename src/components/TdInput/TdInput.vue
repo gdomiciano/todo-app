@@ -1,17 +1,7 @@
 <template>
   <div class="input">
-    <label
-      :for="id"
-      class="input__label"
-    >{{ label }}</label>
-    <input
-      :id="id"
-      class="input__field"
-      :type="type"
-      :name="name"
-      :placeholder="placeholder"
-      v-bind="$attrs"
-    >
+    <label :for="id" class="input__label">{{ label }}</label>
+    <input :id="id" class="input__field" :type="type" :name="name" v-bind="$attrs" />
   </div>
 </template>
 
@@ -26,10 +16,6 @@
       required: true,
     },
     id: {
-      type: String,
-      required: true,
-    },
-    placeholder: {
       type: String,
       required: true,
     },

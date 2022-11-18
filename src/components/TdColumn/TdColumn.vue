@@ -4,11 +4,7 @@
       {{ name }}
     </h2>
     <ul class="column__items">
-      <TdItem
-        v-for="item in currentItems"
-        :key="item.id"
-        :item="item"
-      />
+      <TdItem v-for="item in currentItems" :key="item.id" :item="item" />
     </ul>
   </section>
 </template>
@@ -36,7 +32,7 @@
   .column {
     background-color: var(--bg-color);
     filter: brightness(0.95);
-    padding: var(--small-spacing);
+    padding: var(--small-spacing) var(--base-spacing);
     border-radius: 0.6rem;
     display: grid;
     box-shadow: inset var(--font-color) 0.2rem -0.2rem 0.6rem;
@@ -49,12 +45,6 @@
     margin: 0;
     font-size: 3.4rem;
     text-transform: capitalize;
-  }
-
-  .column__items {
-    display: grid;
-    gap: var(--base-spacing);
-    grid-auto-flow: dense;
   }
 
   @media screen and (min-width: 768px) {

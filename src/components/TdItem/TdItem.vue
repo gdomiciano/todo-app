@@ -1,9 +1,6 @@
 <template>
   <li class="item">
-    <TdCheckbox
-      :id="item.id"
-      :text="item.text"
-    />
+    <TdCheckbox :id="item.id" :text="item.text" />
   </li>
 </template>
 
@@ -22,8 +19,10 @@
   .item {
     list-style: none;
     display: grid;
-    gap: var(--xmall-spacing);
-    grid-template-columns: auto 1fr;
+    gap: var(--xsmall-spacing);
+    grid-template-columns: auto auto;
     justify-content: left;
+
+    margin-bottom: var(--base-spacing);
   }
 </style>

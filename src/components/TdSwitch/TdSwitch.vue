@@ -1,18 +1,19 @@
 <template>
-  <div>
-    <label
-      for="pageTheme"
-      class="switch__label"
-    > {{ label }}</label>
+  <div class="switch">
+    <label for="pageTheme" class="switch__label"> {{ label }}</label>
     <button
       id="pageTheme"
       role="switch"
       :aria-checked="`${isChecked}`"
-      class="switch"
+      class="switch__button"
       @click="onSwitchClick"
     >
-      <span class="switch__state">{{ offText }}</span>
-      <span class="switch__state">{{ onText }}</span>
+      <span :class="['switch__state', { 'switch__state--check': !isChecked }]">{{
+        offText
+      }}</span>
+      <span :class="['switch__state', { 'switch__state--check': isChecked }]">{{
+        onText
+      }}</span>
     </button>
   </div>
 </template>
@@ -51,19 +52,28 @@
 
 <style lang="css" scoped>
   .switch {
+    display: grid;
+    gap: var(--xsmall-spacing);
+  }
+  .switch__button {
     border: 0.2rem solid var(--secondary-color);
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, max-content);
     line-height: var(--medium-spacing);
-    font-size: 1.6rem;
     background-color: var(--white-color);
+    border-radius: 6px;
   }
 
   .switch__state {
     display: inline-block;
-    padding: 0 2rem;
+    padding: var(--small-spacing) var(--base-spacing);
     pointer-events: none;
     text-transform: capitalize;
+  }
+  .switch__state--check::before {
+    content: "✓";
+    display: inline-block;
+    margin-right: var(--xsmall-spacing);
   }
 
   [role="switch"][aria-checked="false"] :first-child,
@@ -75,12 +85,5 @@
   [role="switch"][aria-checked="false"] :last-child,
   [role="switch"][aria-checked="true"] :first-child {
     color: --font-color;
-  }
-
-  .switch__label {
-    font: 16rem;
-    line-height: var(--medium-spacing);
-    vertical-align: middle;
-    user-select: none;
   }
 </style>

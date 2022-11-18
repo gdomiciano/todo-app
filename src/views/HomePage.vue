@@ -1,15 +1,7 @@
 <template>
   <TdHeader />
-  <main
-    id="main"
-    class="container"
-    role="main"
-  >
-    <h1>Todo Kanban App</h1>
-    <form
-      class="container__form"
-      @submit.prevent
-    >
+  <main id="main" class="container" role="main">
+    <form class="container__form" @submit.prevent>
       <TdInput
         id="add"
         v-model="itemValue"
@@ -17,17 +9,10 @@
         name="add"
         label="What do you have todo?"
       />
-      <TdButton
-        type="submit"
-        :label="addBtnText"
-      />
+      <TdButton type="submit" :label="addBtnText" />
     </form>
     <div class="container__columns">
-      <TdColumn
-        v-for="(status, index) in statuses"
-        :key="index"
-        v-bind="status"
-      />
+      <TdColumn v-for="(status, index) in statuses" :key="index" v-bind="status" />
     </div>
   </main>
 </template>
